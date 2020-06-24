@@ -1,0 +1,32 @@
+
+center
+S40401	Carlos Falcó
+S40402	Manuel Lopez
+S40403	Juan Carlos Crespo
+
+east
+S40411	Francisco Brocal
+S40412	Enrique Nunez
+S40413	Oriol Domenech
+S40414	Eduardo Lillo
+
+north
+S40301	Luis Garcia
+S40302	Arkaitz Arregui
+S40303	Luis Garcia
+S40304	Manuel Cossio
+
+south
+S40501	Antonio Garcia Bodi
+S40502	Jesus Abarca
+S40503	Marco Machado
+S40504	Antonio Martin
+
+nc
+S40201	Juan Carlos Accion
+S40202	Luis-Miguel, Castaneda
+S40203	Francesc Cañellas
+S40204	Jose Vicente Garcia-Villarejo
+S40205	Pedro Luis Pedrón
+S40206	David Moliner
+S40207	Daniel Leon-Gullon

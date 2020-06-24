@@ -1,0 +1,2 @@
+$data = Import-Csv C:\Users\baerr\Desktop\dashboard\visits.txt -Delimiter "`t" -Encoding BigEndianUnicode
+$data | Export-Csv C:\Users\baerr\Desktop\dashboard\visits.csv -Encoding UTF8 -NoTypeInformation

@@ -1,0 +1,14 @@
+Hola Robin ;
+
+Básicamente , mi trabajo es con grupos con lo que en mi caso sería ideal verlo de esta manera ( en un primer vistazo no por cliente si por grupos ).
+
+Unidades entregadas por marca vs PY 
+Unidades pendientes de entregar por marca 
+Facturación FTP vs FTP PY ( solo el porcentaje) 
+UHP por marca vs PY( porcentaje )
+
+Estas serían las básicas , luego hay otras que ya se podrían mirar con más tiempo .
+
+Espero que te valga , en caso contrario o necesites más info házmelo saber .
+
+Gracias 

@@ -1,0 +1,38 @@
+https://bl.ocks.org/mbostock/3887051
+https://github.com/d3/d3/wiki/Gallery
+https://www.pair.com/support/kb/how-to-use-jquery-to-show-hide-a-form-on-click/
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_draggable
+https://www.w3schools.com/howto/howto_js_draggable.asp
+
+http://bl.ocks.org/jfreels/6816504
+
+http://embed.plnkr.co/rpRXFq/preview
+
+http://bl.ocks.org/mstanaland/6106487
+
+http://bl.ocks.org/jfreels/6816504
+
+viele charts
+https://bl.ocks.org/d3noob
+
+http://bl.ocks.org/d3noob/e5daff57a04c2639125e
+
+create data frame from scratch
+https://www.geeksforgeeks.org/different-ways-to-create-pandas-dataframe/
+
+https://www.d3-graph-gallery.com/graph/barplot_button_data_csv.html
+
+
+
+SEARCH BLOCK BUILDER FOR CHARTS:
+
+https://blockbuilder.org/search?text=line
+
+
+Unglaubliche 3Dimensionale Grafik
+https://bl.ocks.org/vasturiano/f59675656258d3f490e9faa40828c0e7
+
+
+
+hammer 3d modell
+https://plot.ly/javascript/custom-buttons/

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <style>
+body {
+	width:860px;
+	margin:10px auto;
+	}
+.bar {
+	fill: orange;
+	}
+.myText {
+	font-family: "Helvetica";
+	font-size: 10px;
+	}
+  </style>
+</head>
+
+<body>
+  <div id="graph">
+  </div>
+<script>
+// Set the margins
+var margin = {top: 60, right: 100, bottom: 20, left: 80},
+  width = 850 - margin.left - margin.right,
+  height = 370 - margin.top - margin.bottom;
+
+// Parse the month variable
+var parseMonth = d3.timeParse("%b");
+var formatMonth = d3.timeFormat("%b");
+
+// Set the ranges
+var x = d3.scaleBand().rangeRound([0, width]).padding(0.1)
+var y = d3.scaleLinear().range([height, 0]);
+
+
+// Create the svg canvas in the "graph" div
+var svg = d3.select("#graph")
+        .append("svg")
+        .style("width", width + margin.left + margin.right + "px")
+        .style("height", height + margin.top + margin.bottom + "px")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform","translate(" + margin.left + "," + margin.top + ")")
+        .attr("class", "svg");
+
+// Import the CSV data
+d3.csv("data.csv", function(error, data) {
+  if (error) throw error;
+
+   // Format the data
+  data.forEach(function(d) {
+      d.Month = parseMonth(d.Month);
+      d.S40201 = +d.S40201;
+      d.S40202 = +d.S40202;
+      d.S40203 = +d.S40203;
+  });
+   	
+var nest = [];//create empty array
+var keys = ['S40201','S40202','S40203']; //the headers for your data
+//for each header push the sum as an object
+keys.forEach(function (d, i) {
+  //get the sumfrom your data for all the values of this key i.e. d
+  var sum = d3.sum (data, function(e){ return e[d] }); 
+  //create an object with this key value pair
+  var obj = {
+    key: d, //column name
+    value: sum //sum for the column
+  }
+  nest.push(obj); //push this as an object in the nest array
+})
+
+console.log(nest)
+  // Scale the range of the data
+  x.domain(nest.map(function(d) { return d.key; }));
+  y.domain([0, d3.max(nest, function(d) { return d.value; })]);
+
+  // Set up the x axis
+  var xaxis = svg.append("g")
+       .attr("transform", "translate(0," + height + ")")
+       .attr("class", "x axis")
+       .call(d3.axisBottom(x)
+          //.ticks(d3.timeMonth)
+          .tickSize(0, 0)
+          //.tickFormat(d3.timeFormat("%B"))
+          .tickSizeInner(0)
+          .tickPadding(10));
+
+  // Add the Y Axis
+   var yaxis = svg.append("g")
+       .attr("class", "y axis")
+       .call(d3.axisLeft(y)
+          .ticks(5)
+          .tickSizeInner(0)
+          .tickPadding(6)
+          .tickSize(0, 0));
+
+ // yaxis.select(".domain").style("display","none")
+
+  // Add a label to the y axis
+  svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - 60)
+        .attr("x", 0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .text("Visits")
+        .attr("class", "y axis label");
+
+  // Draw the bars
+  svg.selectAll(".rect")
+      .data(nest)
+      .enter()
+      .append("rect")
+          .attr("class", "bar")
+          .attr("x", function(d) { return x(d.key); })
+          .attr("y", function(d) { return y(d.value); })
+          .attr("width", x.bandwidth())
+          .attr("height", function(d) { return height - y(d.value); });
+
+  
+  
+  // Three lines and labels for the thresholds 0%, 100%, 200% target achievement -->
+  
+  // Draw the line for the first threshold
+  svg.append("line")
+	  .style("stroke", "red")
+      .attr("x1", 0)
+      .attr("y1", y(489.00))
+      .attr("x2", width)
+      .attr("y2", y(489.00));
+
+  // Draw the label for the first threshold
+  svg.append("text")
+ 	  .attr("class", "myText")
+ 	  .attr("x", width + 2)
+      .attr("y", y(489.00))
+      .attr("dominant-baseline", "ideographic")
+      .text("0% ≈ 489.00");
+  
+  // Draw the line for the second threshold
+  svg.append("line")
+	  .style("stroke", "blue")
+      .attr("x1", 0)
+      .attr("y1", y(652.00))
+      .attr("x2", width)
+      .attr("y2", y(652.00));
+	  
+  // Draw the label for the second threshold
+  svg.append("text")
+ 	  .attr("class", "myText")
+ 	  .attr("x", width + 2)
+      .attr("y", y(652.00))
+      .attr("dominant-baseline", "ideographic")
+      .text("100% ≈ 652.00");  
+	  
+  // Draw the line for the third threshold
+  svg.append("line")
+	  .style("stroke", "green")
+      .attr("x1", 0)
+      .attr("y1", y(733.50))
+      .attr("x2", width)
+      .attr("y2", y(733.50));
+
+  // Draw the label for the third threshold
+  svg.append("text")
+ 	  .attr("class", "myText")
+ 	  .attr("x", width + 2)
+      .attr("y", y(733.50))
+      .attr("dominant-baseline", "ideographic")
+      .text("200% ≈ 733.50");
+	  	  
+})
+</script>
+</body>

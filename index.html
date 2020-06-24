@@ -1,0 +1,2326 @@
+<html>
+<head>
+  <script src="jquery.js" type="text/javascript"></script>
+  <script src="loader_progress.js" type="text/javascript"></script>
+  <script src="TreeMenu.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<!-- START: Page Loader. -->
+  <div class='progress' id="progress_div">
+    <div class='bar' id='bar1'></div>
+    <div class='percent' id='percent1'></div>
+  </div>
+<!-- END: Page Loader. -->
+  
+  
+<!-- START: Drag Menu. -->
+<div id="mydiv">
+  <div id="mydivheader">Control Panel</div>
+  
+<!-- START: Tree Menu. -->
+<div class="menu">
+<ul id="#example1">
+
+<!-- 2018 -->
+<li>2018
+  <ul>
+	<li>visits
+	  <ul>
+	  <li><a href="#" type="#visits0" id="buttonvisits0">visits by sales area</a></li>
+	  <li><a href="#" type="#visits1" id="buttonvisits1">visits vs. sold units</a></li>
+	  </ul>
+	</li>
+	<li>sales data
+	  <ul>
+	  <li><a href="#" type="#sales0" id="buttonsales0">introduction</a></li>
+	  <li><a href="#">sales month/area</a>
+		<ul>
+		<li><a href="#" type="#sales11" id="buttonsales11">units FTP</a></li>
+		<li><a href="#" type="#sales2" id="buttonsales2">invoice sales FTP</a></li>
+		<li><a href="#" type="#sales3" id="buttonsales3">units FTP PY</a></li>
+		<li><a href="#" type="#sales4" id="buttonsales4">gross sales actual FTP</a></li>
+		<li><a href="#" type="#sales5" id="buttonsales5">net sales FTP</a></li>
+		<li><a href="#" type="#sales6" id="buttonsales6">net sales FTP PY</a></li>
+		<li><a href="#" type="#sales7" id="buttonsales7">cmc FTP</a></li>
+		<li><a href="#" type="#sales8" id="buttonsales8">cmc FTP PY</a></li>
+		</ul>
+	  </li>
+	  </ul>
+	</li>
+  </ul>
+</li>
+<!-- 2018 -->
+
+<!-- 2019 -->
+<li>2019
+  <ul>
+	<li>visits
+	  <ul>
+	  <li><a href="#" type="#visits0" id="buttonvisits0">visits by sales area</a></li>
+	  <li><a href="#" type="#visits1" id="buttonvisits1">visits vs. sold units</a></li>
+	  </ul>
+	</li>
+	<li>sales data
+	  <ul>
+	  <li><a href="#" type="#sales0" id="buttonsales0">introduction</a></li>
+	  <li><a href="#">sales month/area</a>
+		<ul>
+		<li><a href="#" type="#sales12" id="buttonsales12">units FTP</a></li>
+		<li><a href="#" type="#sales2" id="buttonsales2">invoice sales FTP</a></li>
+		<li><a href="#" type="#sales3" id="buttonsales3">units FTP PY</a></li>
+		<li><a href="#" type="#sales4" id="buttonsales4">gross sales actual FTP</a></li>
+		<li><a href="#" type="#sales5" id="buttonsales5">net sales FTP</a></li>
+		<li><a href="#" type="#sales6" id="buttonsales6">net sales FTP PY</a></li>
+		<li><a href="#" type="#sales7" id="buttonsales7">cmc FTP</a></li>
+		<li><a href="#" type="#sales8" id="buttonsales8">cmc FTP PY</a></li>
+		</ul>
+	  </li>
+	  </ul>
+	</li>
+  </ul>
+</li>
+<!-- 2019 -->
+
+</ul>
+<script type="text/javascript">make_tree_menu('#example1');</script>
+</div class="menu">
+<!-- END: Drag Menu. -->
+<script>	
+$(document).ready(function(){
+    
+        $("#visits0").hide();
+		$("#startscreen").hide();
+		$("#visits1").hide();
+		$("#sales0").hide();		
+		$("#sales2").hide();
+		$("#sales3").hide();
+		$("#sales4").hide();
+		$("#sales5").hide();
+		$("#sales6").hide();
+		$("#sales7").hide();
+		$("#sales8").hide();
+		$("#sales11").hide();
+		$("#sales12").hide();
+   
+});
+</script>
+</div>
+
+
+
+<script>
+$(document).ready(function(){
+    $("#buttonvisits0").click(function(){
+        $("#visits0").toggle();
+		$("#startscreen").hide();
+		$("#visits1").hide();
+		$("#sales0").hide();		
+		$("#sales2").hide();
+		$("#sales3").hide();
+		$("#sales4").hide();
+		$("#sales5").hide();
+		$("#sales6").hide();
+		$("#sales7").hide();
+		$("#sales8").hide();
+		$("#sales11").hide();
+		$("#sales12").hide();
+    });
+});
+
+$(document).ready(function(){
+    $("#buttonvisits1").click(function(){
+        $("#visits1").toggle();
+		$("#startscreen").hide();
+		$("#visits0").hide();
+		$("#sales0").hide();		
+		$("#sales2").hide();
+		$("#sales3").hide();
+		$("#sales4").hide();
+		$("#sales5").hide();
+		$("#sales6").hide();
+		$("#sales7").hide();
+		$("#sales8").hide();
+		$("#sales11").hide();
+		$("#sales12").hide();
+    });
+});
+
+$(document).ready(function(){
+    $("#buttonsales0").click(function(){
+        $("#sales0").toggle();
+		$("#startscreen").hide();
+		$("#visits0").hide();
+		$("#visits1").hide();		
+		$("#sales2").hide();
+		$("#sales3").hide();
+		$("#sales4").hide();
+		$("#sales5").hide();
+		$("#sales6").hide();
+		$("#sales7").hide();
+		$("#sales8").hide();
+		$("#sales11").hide();
+		$("#sales12").hide();
+    });
+});
+
+$(document).ready(function(){
+    $("#buttonsales11").click(function(){
+        $("#sales11").toggle();
+		$("#startscreen").hide();
+		$("#visits0").hide();
+		$("#visits1").hide();
+		$("#sales0").hide();
+		$("#sales12").hide();
+		$("#sales2").hide();
+		$("#sales3").hide();
+		$("#sales4").hide();
+		$("#sales5").hide();
+		$("#sales6").hide();
+		$("#sales7").hide();
+		$("#sales8").hide();
+    });
+});
+
+$(document).ready(function(){
+    $("#buttonsales12").click(function(){
+        $("#sales12").toggle();
+		$("#startscreen").hide();
+		$("#visits0").hide();
+		$("#visits1").hide();
+		$("#sales0").hide();
+		$("#sales11").hide();
+		$("#sales2").hide();
+		$("#sales3").hide();
+		$("#sales4").hide();
+		$("#sales5").hide();
+		$("#sales6").hide();
+		$("#sales7").hide();
+		$("#sales8").hide();
+    });
+});
+
+$(document).ready(function(){
+    $("#buttonsales2").click(function(){
+        $("#sales2").toggle();
+		$("#startscreen").hide();
+		$("#visits0").hide();
+		$("#visits1").hide();
+		$("#sales0").hide();		
+		$("#sales3").hide();
+		$("#sales4").hide();
+		$("#sales5").hide();
+		$("#sales6").hide();
+		$("#sales7").hide();
+		$("#sales8").hide();
+		$("#sales11").hide();
+		$("#sales12").hide();
+    });
+});
+
+$(document).ready(function(){
+    $("#buttonsales3").click(function(){
+        $("#sales3").toggle();
+		$("#startscreen").hide();
+		$("#visits0").hide();
+		$("#visits1").hide();
+		$("#sales0").hide();		
+		$("#sales2").hide();
+		$("#sales4").hide();
+		$("#sales5").hide();
+		$("#sales6").hide();
+		$("#sales7").hide();
+		$("#sales8").hide();
+		$("#sales11").hide();
+		$("#sales12").hide();
+    });
+});
+
+$(document).ready(function(){
+    $("#buttonsales4").click(function(){
+        $("#sales4").toggle();
+		$("#startscreen").hide();
+		$("#visits0").hide();
+		$("#visits1").hide();
+		$("#sales0").hide();		
+		$("#sales2").hide();
+		$("#sales3").hide();
+		$("#sales5").hide();
+		$("#sales6").hide();
+		$("#sales7").hide();
+		$("#sales8").hide();
+		$("#sales11").hide();
+		$("#sales12").hide();
+    });
+});
+
+$(document).ready(function(){
+    $("#buttonsales5").click(function(){
+        $("#sales5").toggle();
+		$("#startscreen").hide();
+		$("#visits0").hide();
+		$("#visits1").hide();
+		$("#sales0").hide();		
+		$("#sales2").hide();
+		$("#sales3").hide();
+		$("#sales4").hide();
+		$("#sales6").hide();
+		$("#sales7").hide();
+		$("#sales8").hide();
+		$("#sales11").hide();
+		$("#sales12").hide();
+    });
+});
+
+$(document).ready(function(){
+    $("#buttonsales6").click(function(){
+        $("#sales6").toggle();
+		$("#startscreen").hide();
+		$("#visits0").hide();
+		$("#visits1").hide();
+		$("#sales0").hide();		
+		$("#sales2").hide();
+		$("#sales3").hide();
+		$("#sales4").hide();
+		$("#sales5").hide();
+		$("#sales7").hide();
+		$("#sales8").hide();
+		$("#sales11").hide();
+		$("#sales12").hide();
+    });
+});
+
+$(document).ready(function(){
+    $("#buttonsales7").click(function(){
+        $("#sales7").toggle();
+		$("#startscreen").hide();
+		$("#visits0").hide();
+		$("#visits1").hide();
+		$("#sales0").hide();		
+		$("#sales2").hide();
+		$("#sales3").hide();
+		$("#sales4").hide();
+		$("#sales5").hide();
+		$("#sales6").hide();
+		$("#sales8").hide();
+		$("#sales11").hide();
+		$("#sales12").hide();
+    });
+});
+
+$(document).ready(function(){
+    $("#buttonsales8").click(function(){
+        $("#sales8").toggle();
+		$("#startscreen").hide();
+		$("#visits0").hide();
+		$("#visits1").hide();
+		$("#sales0").hide();		
+		$("#sales2").hide();
+		$("#sales3").hide();
+		$("#sales4").hide();
+		$("#sales5").hide();
+		$("#sales6").hide();
+		$("#sales7").hide();
+		$("#sales11").hide();
+		$("#sales12").hide();
+    });
+});
+</script>
+
+<script>
+//Make the DIV element draggagle:
+dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
+<!-- END: Drag Menu. --> 
+
+<!-- START: Loads content for start screen "startscreen". -->
+<div id="startscreen">
+	<table id="wrapper">
+	  <tr>
+		<td><img src="startscreen/logo_2.png" alt="" /></td>
+	  </tr>
+	</table>
+</div>
+<!-- END: Loads content for start screen "startscreen". -->
+
+<!-- START: Loads content for visits "0". -->
+<div id="visits0">
+  
+	<!-- START: Dashboards are loaded via object into divs . -->
+	<div id="center">
+	
+		<div class="label" data-toggle="toggle" data-target="#visits0desbox1">
+		<h2>visits</h2>
+		<p>by month and sales region.</p>
+		</div>
+		
+			<!-- START: Label description. -->
+			<div id="visits0desbox1" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+		
+	<object class="ctr" type="text/html" data="visits/0/dashboard_sales_areas_visits.html">
+    </object>
+	</div>
+
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#visits0desbox2">
+		<h2>visits sales region center</h2>
+		<p>by months and sales rep.</p>
+		</div>
+		
+			<!-- START: Label description. -->
+			<div id="visits0desbox2" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->		
+	
+	<object class="ltrl" type="text/html" data="visits/0/dashboard_center_visits.html">
+	</object>
+	</div>
+
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#visits0desbox3">
+		<h2>visits sales region east</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="visits0desbox3" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="visits/0/dashboard_east_visits.html">
+	</object>
+	</div>
+	
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#visits0desbox4">
+		<h2>visits sales region north</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="visits0desbox4" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="visits/0/dashboard_north_visits.html">
+	</object>
+	</div>
+
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#visits0desbox5">
+		<h2>visits sales region south</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="visits0desbox5" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="visits/0/dashboard_south_visits.html">
+	</object>
+	</div>
+	
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#visits0desbox6">
+		<h2>visits sales region nc</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="visits0desbox6" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="visits/0/dashboard_nc_visits.html">
+	</object>
+	</div>
+	
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#visits0desbox7">
+		<h2>visits</h2>
+		<p>not defined.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="visits0desbox7" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="visits/0/dashboard_not_defined_visits.html">
+	</object>
+	</div>
+	
+	
+	<div id="center">
+	
+		<div class="label" data-toggle="toggle" data-target="#visits0desbox8">
+		<h2>visits</h2>
+		<p>not defined.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="visits0desbox8" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ctr" type="text/html" data="visits/0/dashboard_sales_areas_visits.html">
+    </object>
+	</div>	
+
+</div>
+<!-- END: Loads content for visits "0". -->
+
+<!-- START: Loads content for visits "1". -->
+<div id="visits1">
+  
+
+  
+	<!-- START: Dashboards are loaded via object into divs . -->
+	<div id="center">
+	
+		<div class="label" data-toggle="toggle" data-target="#visits1desbox1">
+		<h2>visits</h2>
+		<p>by month and sales region.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="visits1desbox1" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ctr" type="text/html" data="visits/1/visit_targets_sales_areas.html">
+    </object>
+	</div>
+
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#visits1desbox2">
+		<h2>visits sales region center</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="visits1desbox2" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="visits/1/visit_targets_center.html">
+	</object>
+	</div>
+
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#visits1desbox3">
+		<h2>visits sales region east</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="visits1desbox3" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="visits/1/visit_targets_east.html">
+	</object>
+	</div>
+	
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#visits1desbox4">
+		<h2>visits sales region north</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="visits1desbox4" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="visits/1/visit_targets_north.html">
+	</object>
+	</div>
+
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#visits1desbox5">
+		<h2>visits sales region south</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="visits1desbox5" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="visits/1/visit_targets_south.html">
+	</object>
+	</div>
+	
+	<!-- <div> This part is invalidated >>>
+	
+	<div id="left">
+	
+		<div class="label">
+		<h2>visits sales region nc</h2>
+		<p>by months and sales rep.</p>
+		</div>
+	
+	<object type="text/html" data="visits/1/xxx.html"
+    style="width:100%; height:105%;border: 0.5px solid grey;">
+	</object>
+	</div>
+	
+	<div id="right">
+	
+		<div class="label">
+		<h2>visits</h2>
+		<p>not defined.</p>
+		</div>
+	
+	<object type="text/html" data="visits/1/xxx.html"
+    style="width:100%; height:105%;border: 0.5px solid grey;">
+	</object>
+	</div>
+	
+	>>> This part is invalidated </div> -->
+	
+	<div id="center">
+	
+		<div class="label" data-toggle="toggle" data-target="#visits1desbox6">
+		<h2>visits</h2>
+		<p>not defined.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="visits1desbox6" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ctr" type="text/html" data="visits/1/visit_targets_nc.html">
+    </object>
+	</div>	
+
+</div>
+<!-- END: Loads content for visits "1". -->
+
+
+<!-- START: Loads content for Sales "0". -->
+<div id="sales0">	
+
+	<div id="center">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales0desbox1">
+		<h2>units sold - test0</h2>
+		<p>by month and sales region.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales0desbox1" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ctr" type="text/html" data="sales/0/dashboard_sales_areas_sales.html">
+    </object>
+	</div>
+
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales0desbox2">
+		<h2>units sold sales region center</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales0desbox2" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/0/dashboard_center_sales.html">
+	</object>
+	</div>
+
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales0desbox3">
+		<h2>units sold sales region east</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales0desbox3" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/0/dashboard_east_sales.html">
+	</object>
+	</div>
+	
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales0desbox4">
+		<h2>units sold sales region north</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales0desbox4" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/0/dashboard_north_sales.html">
+	</object>
+	</div>
+
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales0desbox5">
+		<h2>units sold sales region south</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales0desbox5" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/0/dashboard_south_sales.html">
+	</object>
+	</div>
+	
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales0desbox6">
+		<h2>units sold sales region nc</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales0desbox6" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/0/dashboard_nc_sales.html">
+	</object>
+	</div>
+	
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales0desbox7">
+		<h2>units sold</h2>
+		<p>not defined.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales0desbox7" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/0/dashboard_not_defined_sales.html">
+	</object>
+	</div>
+	
+	
+	<div id="center">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales0desbox8">
+		<h2>units sold</h2>
+		<p>not defined.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales0desbox8" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ctr" type="text/html" data="sales/0/dashboard_sales_areas_sales.html">
+    </object>
+	</div>
+
+</div>
+<!-- END: Loads content for Sales "0". -->
+
+
+
+<!-- START: Loads content for Sales "1". -->
+<div id="sales11">	
+
+	<div id="center">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales1desbox1">
+		<h2>units sold - test1</h2>
+		<p>by month and sales region.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales1desbox1" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ctr" type="text/html" data="sales/1/dashboard_sales_areas_sales.html">
+    </object>
+	</div>
+
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales1desbox2">
+		<h2>units sold sales region center</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales1desbox2" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/1/dashboard_center_sales.html">
+	</object>
+	</div>
+
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales1desbox3">
+		<h2>units sold sales region east</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales1desbox3" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/1/dashboard_east_sales1.html">
+	</object>
+	</div>
+	
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales1desbox4">
+		<h2>units sold sales region north</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales1desbox4" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/1/dashboard_north_sales.html">
+	</object>
+	</div>
+
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales1desbox5">
+		<h2>units sold sales region south</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales1desbox5" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/1/dashboard_south_sales.html">
+	</object>
+	</div>
+	
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales1desbox6">
+		<h2>units sold sales region nc</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales1desbox6" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/1/dashboard_nc_sales.html">
+	</object>
+	</div>
+	
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales1desbox7">
+		<h2>units sold</h2>
+		<p>not defined.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales1desbox7" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/1/dashboard_not_defined_sales.html">
+	</object>
+	</div>
+	
+	
+	<div id="center">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales1desbox8">
+		<h2>units sold</h2>
+		<p>not defined.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales1desbox8" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ctr" type="text/html" data="sales/1/dashboard_sales_areas_sales.html">
+    </object>
+	</div>
+
+</div>
+<!-- END: Loads content for Sales "1". -->
+
+<!-- START: Loads content for Sales "1". -->
+<div id="sales12">	
+
+		<div id="center">
+		
+			<div class="label" data-toggle="toggle" data-target="#sales1desbox1">
+			<h2>units sold - test1</h2>
+			<p>by month and sales region.</p>
+			</div>
+	
+				<!-- START: Label description. -->
+				<div id="sales1desbox1" class="togglebox">
+					<div class="description">
+					by month and sales region.
+					</div>
+				</div>
+				<!-- END: Label description. -->
+				
+		<object class="ctr" type="text/html" data="sales/1/dashboard_sales_areas_sales.html">
+		</object>
+		</div>
+	
+		<div id="left">
+		
+			<div class="label" data-toggle="toggle" data-target="#sales1desbox2">
+			<h2>units sold sales region center</h2>
+			<p>by months and sales rep.</p>
+			</div>
+	
+				<!-- START: Label description. -->
+				<div id="sales1desbox2" class="togglebox">
+					<div class="description">
+					by month and sales region.
+					</div>
+				</div>
+				<!-- END: Label description. -->
+				
+		<object class="ltrl" type="text/html" data="sales/1/dashboard_center_sales.html">
+		</object>
+		</div>
+	
+		<div id="right">
+		
+			<div class="label" data-toggle="toggle" data-target="#sales1desbox3">
+			<h2>units sold sales region east</h2>
+			<p>by months and sales rep.</p>
+			</div>
+	
+				<!-- START: Label description. -->
+				<div id="sales1desbox3" class="togglebox">
+					<div class="description">
+					by month and sales region.
+					</div>
+				</div>
+				<!-- END: Label description. -->
+				
+		<object class="ltrl" type="text/html" data="sales/1/dashboard_east_sales2.html">
+		</object>
+		</div>
+		
+		<div id="left">
+		
+			<div class="label" data-toggle="toggle" data-target="#sales1desbox4">
+			<h2>units sold sales region north</h2>
+			<p>by months and sales rep.</p>
+			</div>
+	
+				<!-- START: Label description. -->
+				<div id="sales1desbox4" class="togglebox">
+					<div class="description">
+					by month and sales region.
+					</div>
+				</div>
+				<!-- END: Label description. -->
+				
+		<object class="ltrl" type="text/html" data="sales/1/dashboard_north_sales.html">
+		</object>
+		</div>
+	
+		<div id="right">
+		
+			<div class="label" data-toggle="toggle" data-target="#sales1desbox5">
+			<h2>units sold sales region south</h2>
+			<p>by months and sales rep.</p>
+			</div>
+	
+				<!-- START: Label description. -->
+				<div id="sales1desbox5" class="togglebox">
+					<div class="description">
+					by month and sales region.
+					</div>
+				</div>
+				<!-- END: Label description. -->
+				
+		<object class="ltrl" type="text/html" data="sales/1/dashboard_south_sales.html">
+		</object>
+		</div>
+		
+		<div id="left">
+		
+			<div class="label" data-toggle="toggle" data-target="#sales1desbox6">
+			<h2>units sold sales region nc</h2>
+			<p>by months and sales rep.</p>
+			</div>
+	
+				<!-- START: Label description. -->
+				<div id="sales1desbox6" class="togglebox">
+					<div class="description">
+					by month and sales region.
+					</div>
+				</div>
+				<!-- END: Label description. -->
+				
+		<object class="ltrl" type="text/html" data="sales/1/dashboard_nc_sales.html">
+		</object>
+		</div>
+		
+		<div id="right">
+		
+			<div class="label" data-toggle="toggle" data-target="#sales1desbox7">
+			<h2>units sold</h2>
+			<p>not defined.</p>
+			</div>
+	
+				<!-- START: Label description. -->
+				<div id="sales1desbox7" class="togglebox">
+					<div class="description">
+					by month and sales region.
+					</div>
+				</div>
+				<!-- END: Label description. -->
+				
+		<object class="ltrl" type="text/html" data="sales/1/dashboard_not_defined_sales.html">
+		</object>
+		</div>
+		
+		
+		<div id="center">
+		
+			<div class="label" data-toggle="toggle" data-target="#sales1desbox8">
+			<h2>units sold</h2>
+			<p>not defined.</p>
+			</div>
+	
+				<!-- START: Label description. -->
+				<div id="sales1desbox8" class="togglebox">
+					<div class="description">
+					by month and sales region.
+					</div>
+				</div>
+				<!-- END: Label description. -->
+				
+		<object class="ctr" type="text/html" data="sales/1/dashboard_sales_areas_sales.html">
+		</object>
+		</div>
+	
+	</div>
+	<!-- END: Loads content for Sales "1". -->
+
+
+
+<!-- START: Loads content for Sales "2". -->
+<div id="sales2">	
+
+	<div id="center">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales2desbox1">
+		<h2>units sold - test2</h2>
+		<p>by month and sales region.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales2desbox1" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ctr" type="text/html" data="sales/2/dashboard_sales_areas_sales.html">
+    </object>
+	</div>
+
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales2desbox2">
+		<h2>units sold sales region center</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales2desbox2" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/2/dashboard_center_sales.html">
+	</object>
+	</div>
+
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales2desbox3">
+		<h2>units sold sales region east</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales2desbox3" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/2/dashboard_east_sales.html">
+	</object>
+	</div>
+	
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales2desbox4">
+		<h2>units sold sales region north</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales2desbox4" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/2/dashboard_north_sales.html">
+	</object>
+	</div>
+
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales2desbox5">
+		<h2>units sold sales region south</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales2desbox5" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/2/dashboard_south_sales.html">
+	</object>
+	</div>
+	
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales2desbox6">
+		<h2>units sold sales region nc</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales2desbox6" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/2/dashboard_nc_sales.html">
+	</object>
+	</div>
+	
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales2desbox7">
+		<h2>units sold</h2>
+		<p>not defined.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales2desbox7" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/2/dashboard_not_defined_sales.html">
+	</object>
+	</div>
+	
+	
+	<div id="center">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales2desbox8">
+		<h2>units sold</h2>
+		<p>not defined.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales2desbox8" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ctr" type="text/html" data="sales/2/dashboard_sales_areas_sales.html">
+    </object>
+	</div>
+
+</div>
+<!-- END: Loads content for Sales "2". -->
+
+
+
+<!-- START: Loads content for Sales "3". -->
+<div id="sales3">	
+
+	<div id="center">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales3desbox1">
+		<h2>units sold - test3</h2>
+		<p>by month and sales region.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales3desbox1" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ctr" type="text/html" data="sales/3/dashboard_sales_areas_sales.html">
+    </object>
+	</div>
+
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales3desbox2">
+		<h2>units sold sales region center</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales3desbox2" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/3/dashboard_center_sales.html">
+	</object>
+	</div>
+
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales3desbox3">
+		<h2>units sold sales region east</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales3desbox3" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/3/dashboard_east_sales.html">
+	</object>
+	</div>
+	
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales3desbox4">
+		<h2>units sold sales region north</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales3desbox4" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/3/dashboard_north_sales.html">
+	</object>
+	</div>
+
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales3desbox5">
+		<h2>units sold sales region south</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales3desbox5" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/3/dashboard_south_sales.html">
+	</object>
+	</div>
+	
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales3desbox6">
+		<h2>units sold sales region nc</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales3desbox6" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/3/dashboard_nc_sales.html">
+	</object>
+	</div>
+	
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales3desbox7">
+		<h2>units sold</h2>
+		<p>not defined.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales3desbox7" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/3/dashboard_not_defined_sales.html">
+	</object>
+	</div>
+	
+	
+	<div id="center">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales3desbox8">
+		<h2>units sold</h2>
+		<p>not defined.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales3desbox8" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ctr" type="text/html" data="sales/3/dashboard_sales_areas_sales.html">
+    </object>
+	</div>
+
+</div>
+<!-- END: Loads content for Sales "3". -->
+
+
+
+<!-- START: Loads content for Sales "4". -->
+<div id="sales4">	
+
+	<div id="center">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales4desbox1">
+		<h2>units sold - test4</h2>
+		<p>by month and sales region.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales4desbox1" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ctr" type="text/html" data="sales/4/dashboard_sales_areas_sales.html">
+    </object>
+	</div>
+
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales4desbox2">
+		<h2>units sold sales region center</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales4desbox2" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/4/dashboard_center_sales.html">
+	</object>
+	</div>
+
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales4desbox3">
+		<h2>units sold sales region east</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales4desbox3" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/4/dashboard_east_sales.html">
+	</object>
+	</div>
+	
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales4desbox4">
+		<h2>units sold sales region north</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales4desbox4" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/4/dashboard_north_sales.html">
+	</object>
+	</div>
+
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales4desbox5">
+		<h2>units sold sales region south</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales4desbox5" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/4/dashboard_south_sales.html">
+	</object>
+	</div>
+	
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales4desbox6">
+		<h2>units sold sales region nc</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales4desbox6" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/4/dashboard_nc_sales.html">
+	</object>
+	</div>
+	
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales4desbox7">
+		<h2>units sold</h2>
+		<p>not defined.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales4desbox7" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/4/dashboard_not_defined_sales.html">
+	</object>
+	</div>
+	
+	
+	<div id="center">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales4desbox8">
+		<h2>units sold</h2>
+		<p>not defined.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales4desbox8" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ctr" type="text/html" data="sales/4/dashboard_sales_areas_sales.html">
+    </object>
+	</div>
+
+</div>
+<!-- END: Loads content for Sales "4". -->
+
+
+
+<!-- START: Loads content for Sales "5". -->
+<div id="sales5">	
+
+	<div id="center">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales5desbox1">
+		<h2>units sold - test5</h2>
+		<p>by month and sales region.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales5desbox1" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ctr" type="text/html" data="sales/5/dashboard_sales_areas_sales.html">
+    </object>
+	</div>
+
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales5desbox2">
+		<h2>units sold sales region center</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales5desbox2" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/5/dashboard_center_sales.html">
+	</object>
+	</div>
+
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales5desbox3">
+		<h2>units sold sales region east</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales5desbox3" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/5/dashboard_east_sales.html">
+	</object>
+	</div>
+	
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales5desbox4">
+		<h2>units sold sales region north</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales5desbox4" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/5/dashboard_north_sales.html">
+	</object>
+	</div>
+
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales5desbox5">
+		<h2>units sold sales region south</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales5desbox5" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/5/dashboard_south_sales.html">
+	</object>
+	</div>
+	
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales5desbox6">
+		<h2>units sold sales region nc</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales5desbox6" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/5/dashboard_nc_sales.html">
+	</object>
+	</div>
+	
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales5desbox7">
+		<h2>units sold</h2>
+		<p>not defined.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales5desbox7" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/5/dashboard_not_defined_sales.html">
+	</object>
+	</div>
+	
+	
+	<div id="center">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales5desbox8">
+		<h2>units sold</h2>
+		<p>not defined.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales5desbox8" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ctr" type="text/html" data="sales/5/dashboard_sales_areas_sales.html">
+    </object>
+	</div>
+
+</div>
+<!-- END: Loads content for Sales "5". -->
+
+
+
+<!-- START: Loads content for Sales "6". -->
+<div id="sales6">	
+
+	<div id="center">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales6desbox1">
+		<h2>units sold - test6</h2>
+		<p>by month and sales region.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales6desbox1" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ctr" type="text/html" data="sales/6/dashboard_sales_areas_sales.html">
+    </object>
+	</div>
+
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales6desbox2">
+		<h2>units sold sales region center</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales6desbox2" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/6/dashboard_center_sales.html">
+	</object>
+	</div>
+
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales6desbox3">
+		<h2>units sold sales region east</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales6desbox3" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/6/dashboard_east_sales.html">
+	</object>
+	</div>
+	
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales6desbox4">
+		<h2>units sold sales region north</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales6desbox4" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/6/dashboard_north_sales.html">
+	</object>
+	</div>
+
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales6desbox5">
+		<h2>units sold sales region south</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales6desbox5" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/6/dashboard_south_sales.html">
+	</object>
+	</div>
+	
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales6desbox6">
+		<h2>units sold sales region nc</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales6desbox6" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/6/dashboard_nc_sales.html">
+	</object>
+	</div>
+	
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales6desbox7">
+		<h2>units sold</h2>
+		<p>not defined.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales6desbox7" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/6/dashboard_not_defined_sales.html">
+	</object>
+	</div>
+	
+	
+	<div id="center">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales6desbox8">
+		<h2>units sold</h2>
+		<p>not defined.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales6desbox8" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ctr" type="text/html" data="sales/6/dashboard_sales_areas_sales.html">
+    </object>
+	</div>
+
+</div>
+<!-- END: Loads content for Sales "6". -->
+
+
+
+<!-- START: Loads content for Sales "7". -->
+<div id="sales7">	
+
+	<div id="center">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales7desbox1">
+		<h2>units sold - test7</h2>
+		<p>by month and sales region.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales7desbox1" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ctr" type="text/html" data="sales/6/dashboard_sales_areas_sales.html">
+    </object>
+	</div>
+
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales7desbox2">
+		<h2>units sold sales region center</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales7desbox2" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/6/dashboard_center_sales.html">
+	</object>
+	</div>
+
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales7desbox3">
+		<h2>units sold sales region east</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales7desbox3" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/6/dashboard_east_sales.html">
+	</object>
+	</div>
+	
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales7desbox4">
+		<h2>units sold sales region north</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales7desbox4" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/6/dashboard_north_sales.html">
+	</object>
+	</div>
+
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales7desbox5">
+		<h2>units sold sales region south</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales7desbox5" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/6/dashboard_south_sales.html">
+	</object>
+	</div>
+	
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales7desbox6">
+		<h2>units sold sales region nc</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales7desbox6" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/6/dashboard_nc_sales.html">
+	</object>
+	</div>
+	
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales7desbox7">
+		<h2>units sold</h2>
+		<p>not defined.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales7desbox7" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/6/dashboard_not_defined_sales.html">
+	</object>
+	</div>
+	
+	
+	<div id="center">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales7desbox8">
+		<h2>units sold</h2>
+		<p>not defined.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales7desbox8" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ctr" type="text/html" data="sales/6/dashboard_sales_areas_sales.html">
+    </object>
+	</div>
+
+</div>
+<!-- END: Loads content for Sales "7". -->
+
+
+
+<!-- START: Loads content for Sales "8". -->
+<div id="sales8">	
+
+	<div id="center">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales8desbox1">
+		<h2>units sold - test8</h2>
+		<p>by month and sales region.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales8desbox1" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ctr" type="text/html" data="sales/6/dashboard_sales_areas_sales.html">
+    </object>
+	</div>
+
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales8desbox2">
+		<h2>units sold sales region center</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales8desbox2" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/6/dashboard_center_sales.html">
+	</object>
+	</div>
+
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales8desbox3">
+		<h2>units sold sales region east</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales8desbox3" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/6/dashboard_east_sales.html">
+	</object>
+	</div>
+	
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales8desbox4">
+		<h2>units sold sales region north</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales8desbox4" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/6/dashboard_north_sales.html">
+	</object>
+	</div>
+
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales8desbox5">
+		<h2>units sold sales region south</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales8desbox5" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/6/dashboard_south_sales.html">
+	</object>
+	</div>
+	
+	<div id="left">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales8desbox6">
+		<h2>units sold sales region nc</h2>
+		<p>by months and sales rep.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales8desbox6" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/6/dashboard_nc_sales.html">
+	</object>
+	</div>
+	
+	<div id="right">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales8desbox7">
+		<h2>units sold</h2>
+		<p>not defined.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales8desbox7" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ltrl" type="text/html" data="sales/6/dashboard_not_defined_sales.html">
+	</object>
+	</div>
+	
+	
+	<div id="center">
+	
+		<div class="label" data-toggle="toggle" data-target="#sales8desbox8">
+		<h2>units sold</h2>
+		<p>not defined.</p>
+		</div>
+
+			<!-- START: Label description. -->
+			<div id="sales8desbox8" class="togglebox">
+				<div class="description">
+				by month and sales region.
+				</div>
+			</div>
+			<!-- END: Label description. -->
+			
+	<object class="ctr" type="text/html" data="sales/6/dashboard_sales_areas_sales.html">
+    </object>
+	</div>
+
+</div>
+<!-- END: Loads content for Sales "8". -->
+
+
+
+
+	
+	<!-- END: Dashboards are loaded via object into divs . -->
+
+  
+	<!-- END: Loads content. -->
+
+		<!-- START: Toggle effect for Label description. -->
+			<script>
+			$("[data-toggle='toggle']").hover(function() {
+			var selector = $(this).data("target");
+			$(selector).toggleClass('in');
+			});
+			</script>
+		<!-- END: Toggle effect for Label description. -->
+
+  <input type="hidden" id="progress_width" value="0">
+</body>
+</html>

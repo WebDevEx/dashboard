@@ -1,0 +1,5 @@
+https://www.w3schools.com/colors/colors_picker.asp
+
+official Conti Orange:
+
+	#FEA500

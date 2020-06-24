@@ -1,0 +1,234 @@
+/* Loading Bar at beginning */
+.progress 
+{
+ position: fixed;
+ left: 0px;
+ top: 0px;
+ width: 100%;
+ height: 100%;
+ z-index: 9999;
+ background-color: #F2F2F2;
+}
+.bar 
+{ 
+  background-color: #FEA500; /* Davor diese Farbe: #819FF7; (blau) */
+  width:0%; 
+  height:5px; 
+  border-radius: 3px; 
+}
+.percent 
+{ 
+  position:absolute; 
+  display:inline-block; 
+  top:3px; 
+  left:48%; 
+}
+
+
+/* Title/Label of each Dashboard with description below */
+.label {
+    border: 1px dotted #ccc;
+	font: 400 10px Roboto, Arial, sans-serif;
+	text-decoration: none;
+    height: auto;
+    width: 250px;
+    display: inline-block; /*davor: "display: table-cell;" */
+    vertical-align: middle;
+	background-color: #FEA500; /* Blau ist: #2196F3  */
+	border-radius: 5px;
+	padding: 0px;
+	padding-left: 10px;
+	margin: 10px 0px 10px 0px;
+}
+
+
+/* Description  for Label Toggle */
+.togglebox {
+    -webkit-transition: width 0.2s ease;
+    -moz-transition: width 0.2s ease;
+    -o-transition: width 0.2s ease;
+    transition: width 0.2s ease;
+    
+	display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    background: #ffdb99;
+	border-radius: 5px;
+    vertical-align: middle;
+    line-height: 30px;
+    height: 65px;
+    width: 0px;
+}
+
+.togglebox.in {
+    width: 250px;
+}
+
+.description {
+	font: 400 10px Roboto, Arial, sans-serif;
+	text-decoration: none;
+	padding: 10px 10px 10px 10px;;
+}
+
+
+/* Style for Start Screen Logo */
+img {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 500px;
+   height: 500px;
+   margin-top: -250px; /* Half the height */
+   margin-left: -250px; /* Half the width */
+}
+
+
+/* Containers to show/hide when clicked in menu */
+#visits0 {
+  display: none;
+}
+#visits1 {
+  display: none;
+}
+#sales0 {
+  display: none;
+}
+#sales1 {
+  display: none;
+}
+#sales2 {
+  display: none;
+}
+#sales3 {
+  display: none;
+}
+#sales4 {
+  display: none;
+}
+#sales5 {
+  display: none;
+}
+#sales6 {
+  display: none;
+}
+#sales7 {
+  display: none;
+}
+#sales8 {
+  display: none;
+}
+
+
+
+/* Dashboard DIVS */
+#center {
+  width: 100%;
+  margin: 0 auto;
+}
+#left {
+  width: 50%;
+  float: left;
+}
+#right {
+  width: 50%;
+  float: right;
+}
+
+
+/* Center: Object Klasse Style: Objects in welche die externen HTML-Files reingeladen werden */
+/* Center: sind die oberen oder unteren obejects die länger sind */
+.ctr
+{ 
+  width:100%;
+  height:40%;
+  border: 0.5px solid grey;
+}
+
+
+/* Lateral: lateral: sind die seitlichen (rechts oder links) obejects die kleineren */
+.ltrl
+{ 
+  width:100%;
+  height:67vh; /* %  --> use vh instead of %. 100vh is the height of the viewport */
+  border: 0.5px solid grey;
+}
+
+
+/* Drag Menu */
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+}
+
+#mydivheader {
+  font: 400 15px Roboto, Arial, sans-serif;
+  font-weight: bold;
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background: #FEA500 url("startscreen/logo_3_small.png") no-repeat left center; /* Blue Background before: #2196F3;  Official Conti orange: 	#FEA500*/
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+
+
+/* Tree Menu */
+
+
+
+/* Menu container */
+.menu	{
+	width:235px;
+	border:solid #FF9900 1px;
+	border-radius: 5px;
+	padding:10px 5px 10px 5px;
+	margin:12px 12px 12px 12px;
+	}
+
+/* Menu styles */
+.menu ul
+	{
+	margin:0px;
+	padding:0px;
+	}
+.menu li
+	{
+	margin:0px 0px 0px 5px;
+	padding:0px;
+	list-style-type:none;
+	text-align:left;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:13px;
+	font-weight:normal;
+	}
+
+/* Submenu styles */
+.menu ul ul 
+	{ background-color:#F6F6F6; }
+.menu li li
+	{ margin:0px 0px 0px 16px; }
+
+/* Symbol styles */
+.menu .symbol-item,
+.menu .symbol-open,
+.menu .symbol-close
+	{
+	float:left;
+	width:16px;
+	height:1em;
+	background-position:left center;
+	background-repeat:no-repeat;
+	}
+.menu .symbol-item  { background-image:url(icons/page.png); }
+.menu .symbol-open  { background-image:url(icons/minus.png); }
+.menu .symbol-close { background-image:url(icons/plus.png);}
+
+/* Menu line styles */
+.menu li.open  { font-weight:bold; }
+.menu li.close { font-weight:normal; }

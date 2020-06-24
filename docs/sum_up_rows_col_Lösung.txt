@@ -1,0 +1,17 @@
+Sum up Function
+
+https://stackoverflow.com/questions/25748683/pandas-sum-dataframe-rows-for-given-columns
+
+df['h']=df.iloc[:,[0,3]].sum(axis=1)
+
+df durch visits ersetzen
+
+#Create sales areas by summing up sales codes
+
+df['e'] = df['a'].astype(int) + df['b'].astype(int) + df['d'].astype(int)
+
+columsn spezifizieren
+
+
+NaN werte durch 0 ersetzen:
+df = df.fillna(0)
